@@ -12,8 +12,10 @@ Install git if not already installed!
 
 Then run:
 
-`git clone https://github.com/skrtbhtngr/vimrc.git ~/.vimrc'
+`git clone https://github.com/skrtbhtngr/vimrc.git ~/.vimrc`
 
-'bash ~/.vimrc/install.sh`
+`bash ~/.vimrc/install.sh`
 
 This script installs `vim-plug`, `vim-pathogen`, and `auto-pairs`.
+
+Highlighting the cursor line may cause color issues as I have set the colors according to solarized-dark color scheme of terminal (not vim).
