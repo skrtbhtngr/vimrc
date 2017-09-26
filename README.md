@@ -11,11 +11,11 @@ Install git and curl if not already installed!
 
 Then run:
 
-`git clone https://github.com/skrtbhtngr/vimrc.git ~/.vimrc`
+`git clone https://github.com/skrtbhtngr/vimrc.git ~/.vimconf`
 
-`chmod +x ~/.vimrc/install.sh`
+`chmod +x ~/.vimconf/install.sh`
 
-`~/.vimrc/install.sh`
+`~/.vimconf/install.sh`
 
 This script installs `vim-pathogen`, `vim-airline`, and `auto-pairs`.
 
