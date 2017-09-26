@@ -14,7 +14,9 @@ Then run:
 
 `git clone https://github.com/skrtbhtngr/vimrc.git ~/.vimrc`
 
-`bash ~/.vimrc/install.sh`
+`chmod +x ~/.vimrc/install.sh`
+
+`~/.vimrc/install.sh`
 
 This script installs `vim-plug`, `vim-pathogen`, and `auto-pairs`.
 
