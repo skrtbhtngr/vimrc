@@ -1,15 +1,6 @@
 "Pathogen code
 execute pathogen#infect()
 
-
-"vim-plug code
-call plug#begin()
-
-Plug 'vim-airline/vim-airline'  "Fetches vim-airline
-
-call plug#end()
-
-
 "vim configuraion
 
 filetype plugin indent on   "Filetype-specific auto-indenting
