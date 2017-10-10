@@ -1,6 +1,6 @@
 # My vimrc configuration!
 
-This is a (very) basic vim configuration and uses the following:
+This is a (very) basic vim configuration having some frequently required options set and useful plugins enabled. It uses the following:
 * [vim-pathogen](https://github.com/tpope/vim-pathogen)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs)
