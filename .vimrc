@@ -35,9 +35,15 @@ set backspace=indent,eol,start  "Allow backspacing over autoindent, line breaks 
 set hlsearch                "Highlight the search term matches, if found
                             ":nohlsearch to clear the highlights
 
+set pastetoggle=<F3>        "Use F3 to toggle in and out of Paste mode. Useful when pasting indented text.
+
+set mouse+=a                "Enables the mouse for GUI mode. Helps in copying lines while ignoring line numbers using mouse.
+
 "Ctrl-X and Ctr-V are not bound to any vim command by default.
 map <C-X> :wq<enter>        "Maps Ctrl-X to :wq!
                             "So, press Ctrl-X to save and quit
 
 map <C-V> :wq<enter>        "Maps Ctrl-V to :q!
                             "So, press Ctrl-V to quit
+
+
