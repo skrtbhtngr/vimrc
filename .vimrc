@@ -1,7 +1,7 @@
 "Pathogen code
 execute pathogen#infect()
 
-"vim configuraion
+"Vim configuraion
 
 filetype plugin indent on   "Filetype-specific auto-indenting
 
