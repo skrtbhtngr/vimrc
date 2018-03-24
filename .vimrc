@@ -35,6 +35,8 @@ set backspace=indent,eol,start  "Allow backspacing over autoindent, line breaks 
 set hlsearch                "Highlight the search term matches, if found
                             ":nohlsearch to clear the highlights
 
+set incsearch               "Start searching as soon as a character is entered, refine search on every change in search string
+
 set pastetoggle=<F3>        "Use F3 to toggle in and out of Paste mode. Useful when pasting indented text.
 
 set mouse+=a                "Enables the mouse for GUI mode. Helps in copying lines while ignoring line numbers using mouse.
