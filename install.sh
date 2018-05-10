@@ -10,6 +10,9 @@ echo -e "\nInstalling vim-airline...\n"
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 
 echo -e "\nInstalling auto-pairs...\n"
-git clone https://github.com/jiangmiao/auto-pairs.git ~/.vim/bundle/auto-pairs
+git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
+
+echo -e "\nInstalling Tagbar...\n"
+git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/vim-airline/tagbar
 
 echo -e "\nDone!"

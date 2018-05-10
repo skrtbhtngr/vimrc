@@ -39,14 +39,10 @@ set incsearch               "Start searching as soon as a character is entered, 
 
 set pastetoggle=<F3>        "Use F3 to toggle in and out of Paste mode. Useful when pasting indented text.
 
-set mouse+=a                "Enables the mouse for GUI mode. Helps in copying lines while ignoring line numbers using mouse.
-
 set autoread                "Re-read the file if changed from another program
 
 set noerrorbells            "Supress annoying noise
 set novisualbell
 
-"Ctrl-X is not bound to any vim command by default.
-map <C-X> :wq<enter>        "Maps Ctrl-X to :wq!
-                            "So, press Ctrl-X to save and quit
-
+"Use F8 to toggle Tagbar
+nmap <F8> :TagbarToggle<CR>
