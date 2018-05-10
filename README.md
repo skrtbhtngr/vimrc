@@ -5,10 +5,12 @@ This is a basic vim configuration having some frequently needed options set and 
 * [vim-pathogen](https://github.com/tpope/vim-pathogen)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+* [tagbar](https://github.com/majutsushi/tagbar)
 
 To use this configuration:
 
 Install `git` and `curl` if not already installed!
+Also, `ctags` is required to be installed.
 
 Then run:
 
@@ -18,7 +20,7 @@ Then run:
 
 `~/.vimconf/install.sh`
 
-This script also installs `vim-pathogen`, `vim-airline`, and `auto-pairs`.
+This script also installs `vim-pathogen`, `vim-airline`, `auto-pairs`, and `tagbar`.
 
 I have also included some comments which may help you in removing any option(s) you do not require.
 
