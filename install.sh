@@ -13,6 +13,6 @@ echo -e "\nInstalling auto-pairs...\n"
 git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
 
 echo -e "\nInstalling Tagbar...\n"
-git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/vim-airline/tagbar
+git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 
 echo -e "\nDone!"
