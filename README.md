@@ -27,7 +27,11 @@ I have also included some comments which may help you in removing any option(s) 
 If you wish to learn more about vim options, refer: [Vim documentation: options](http://vimdoc.sourceforge.net/htmldoc/options.html)
 
 *NOTE:* Highlighting the cursor line may cause color issues as I have set the colors according to those of my iTerm profile (not vim).
+
 Foreground: #FFFFFF
+
 Background: #1E1E1E
+
 Selection: #343434
+
 Selected Text: #B2B2B2
