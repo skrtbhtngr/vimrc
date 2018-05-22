@@ -9,6 +9,9 @@ curl -Lo ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 echo -e "\nInstalling vim-airline...\n"
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 
+echo -e "\nInstalling vim-airline-themes...\n"
+git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
+
 echo -e "\nInstalling auto-pairs...\n"
 git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
 

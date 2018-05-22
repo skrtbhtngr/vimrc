@@ -4,6 +4,7 @@ This is a basic vim configuration having some frequently needed options set and 
 
 * [vim-pathogen](https://github.com/tpope/vim-pathogen)
 * [vim-airline](https://github.com/vim-airline/vim-airline)
+* [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * [tagbar](https://github.com/majutsushi/tagbar)
 
@@ -20,7 +21,7 @@ Then run:
 
 `~/.vimconf/install.sh`
 
-This script also installs `vim-pathogen`, `vim-airline`, `auto-pairs`, and `tagbar`.
+This script also installs `vim-pathogen`, `vim-airline`, `vim-airline-themes`, `auto-pairs`, and `tagbar`.
 
 I have also included some comments which may help you in removing any option(s) you do not require.
 
