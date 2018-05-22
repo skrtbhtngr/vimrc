@@ -16,7 +16,8 @@ set autoindent  	        "Keep the same indent as the line you're currently on
 set ruler		            "Display the cursor position on the last line of the screen or in the status line of a window
                             "(in case you disable vim-airline)
 set cursorline              "Enable cursor line
-highlight CursorLine cterm=None ctermfg=NONE ctermbg=0 guibg=Grey40
+highlight CursorLine cterm=None ctermfg=None ctermbg=235
+highlight CursorLineNR cterm=None ctermfg=None ctermbg=None
 
 set number		            "Display line numbers on the left
 
