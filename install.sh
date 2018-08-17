@@ -18,4 +18,10 @@ git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
 echo -e "\nInstalling Tagbar...\n"
 git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 
+echo -e "\nInstalling vim-operator-user...\n"
+git clone https://github.com/kana/vim-operator-user.git ~/.vim/bundle/vim-operator-user
+
+echo -e "\nInstalling vim-clang-format...\n"
+git clone https://github.com/rhysd/vim-clang-format.git ~/.vim/bundle/vim-clang-format
+
 echo -e "\nDone!"
