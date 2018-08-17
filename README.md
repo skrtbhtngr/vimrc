@@ -10,16 +10,16 @@ This is a basic vim configuration having some frequently needed options set and 
 
 To use this configuration:
 
-Install `git` and `curl` if not already installed!
-Also, `ctags` is required to be installed.
+Install `git`, `curl` and `ctags` if not already installed!
 
 Then run:
 
-`git clone https://github.com/skrtbhtngr/vimrc.git ~/.vimconf`
-
-`chmod +x ~/.vimconf/install.sh`
-
-`~/.vimconf/install.sh`
+```
+git clone https://github.com/skrtbhtngr/vimrc.git ~/.vimconf
+chmod +x ~/.vimconf/install.sh
+~/.vimconf/install.sh
+rm -rf ~/.vimconf
+```
 
 This script also installs `vim-pathogen`, `vim-airline`, `vim-airline-themes`, `auto-pairs`, and `tagbar`.
 
