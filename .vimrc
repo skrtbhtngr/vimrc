@@ -48,6 +48,8 @@ set novisualbell
 "Use F8 to toggle Tagbar
 nmap <F8> :TagbarToggle<CR>
 
+"Use F4 to remove line numbers
+nmap <F4> :set nonu<CR>
 
 "Set the airline bar theme
 let g:airline_theme='ubaryd'
@@ -55,3 +57,6 @@ let g:airline_theme='ubaryd'
 "Sort the tags in Tagbar according to their location in source file,
 "not by their name
 let g:tagbar_sort = 0
+
+"Set paths to search on for tags file
+set tags=./tags,tags;$HOME
