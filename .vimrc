@@ -60,3 +60,27 @@ let g:tagbar_sort = 0
 
 "Set paths to search on for tags file
 set tags=./tags,tags;$HOME
+
+let g:clang_format#style_options = {
+            \ "AllowShortIfStatementsOnASingleLine" : "false",
+            \ "Standard" : "Auto",
+            \ "AllowShortFunctionsOnASingleLine" : "Empty",
+            \ "AllowShortLoopsOnASingleLine" : "false",
+            \ "AlignAfterOpenBracket" : "true",
+            \ "AlignConsecutiveAssignments" : "true",
+            \ "ColumnLimit" : "80",
+            \ "IncludeBlocks" : "Preserve",
+            \ "IndentCaseLabels" : "true",
+            \ "IndentPPDirectives" : "AfterHash",
+            \ "IndentWidth" : "4",
+            \ "TabWidth" : "4",
+            \ "Language" : "Cpp",
+            \ "MaxEmptyLinesToKeep" : "3",
+            \ "PointerAlignment" : "Right",
+            \ "SpaceAfterCStyleCast" : "true",
+            \ "SpaceBeforeParens" : "Never",
+            \ "BreakBeforeBraces" : "Allman" }
+
+"Use F5 to autoformat code
+nmap <F5> :ClangFormat<CR>
+
