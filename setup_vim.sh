@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mv ~/.vimconf/.vimrc ~/.vimrc
+ln -s ~/.vimconf/.vimrc ~/.vimrc
 
 echo -e "Installing vim-pathogen...\n"
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \

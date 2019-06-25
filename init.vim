@@ -1,25 +1,38 @@
-"Pathogen code
-execute pathogen#infect()
-
-"Vim configuraion
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+  if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
 filetype plugin indent on   "Filetype-specific auto-indenting
 
 syntax on                   "Syntax highlighting
 
-set t_Co=256                "Display 256 colors (usually the default setting)
+colorscheme onedark         "Enable onedark theme
 
-colorscheme default         "Fixate on the default color scheme
+let g:lightline = { 'colorscheme': 'one' }
+
+set t_Co=256                "Display 256 colors (usually the default setting)
 
 set wildmenu                "Better command-line completion
 
 set autoindent              "Keep the same indent as the line you're currently on
 
+set guicursor=              "Prevent block cursor from turning into i-beam in insert mode
+
 set ruler                   "Display the cursor position on the last line of the screen or in the status line of a window
                             "(in case you disable vim-airline)
 set cursorline              "Enable cursor line
-highlight CursorLine cterm=None ctermfg=None ctermbg=235
-highlight CursorLineNR cterm=None ctermfg=None ctermbg=None
 
 set number                  "Display line numbers on the left
 
@@ -27,11 +40,11 @@ set tabstop=4               "Tells how many cols a tab counts for. Affects how t
 
 set softtabstop=4           "Sets how many cols vim uses when you use Tab in insert mode; also deletes whole Tab space when backspace is pressed on it
 
+set laststatus=2            "Always show the status line
+
 set shiftwidth=4            "Shift 4 places when indenting
 
 set expandtab               "Translate tabs to spaces!!
-
-set laststatus=2            "Always display the status line, even if only one window is displayed
 
 set backspace=indent,eol,start  "Allow backspacing over autoindent, line breaks and start of insert action
 
@@ -54,11 +67,8 @@ set pastetoggle=<F3>
 "Use F4 to toggle line numbers
 nmap <F4> :set invnumber<CR>
 
-"Use F5 to autoformat code
-nmap <F5> :ClangFormat<CR>
-
-"Use F8 to toggle Tagbar
-nmap <F8> :TagbarToggle<CR>
+"Set paths to search on for tags file
+set tags=./tags,tags;$HOME
 
 "Code folding
 nnoremap F zfa}<CR>
@@ -70,32 +80,11 @@ augroup persist_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
-"Set the airline bar theme
-let g:airline_theme='ubaryd'
+"Enable nerdtree
+"autocmd vimenter * NERDTree | wincmd w
 
-"Sort the tags in Tagbar according to their location in source file,
-"not by their name
-let g:tagbar_sort = 0
+"Set nerdtree window size
+"let g:NERDTreeWinSize = 20
 
-"Set paths to search on for tags file
-set tags=./tags,tags;$HOME
-
-let g:clang_format#style_options = {
-            \ "AllowShortIfStatementsOnASingleLine" : "false",
-            \ "Standard" : "Auto",
-            \ "AllowShortFunctionsOnASingleLine" : "Empty",
-            \ "AllowShortLoopsOnASingleLine" : "false",
-            \ "AlignAfterOpenBracket" : "true",
-            \ "AlignConsecutiveAssignments" : "true",
-            \ "ColumnLimit" : "80",
-            \ "IncludeBlocks" : "Preserve",
-            \ "IndentCaseLabels" : "true",
-            \ "IndentPPDirectives" : "AfterHash",
-            \ "IndentWidth" : "4",
-            \ "TabWidth" : "4",
-            \ "Language" : "Cpp",
-            \ "MaxEmptyLinesToKeep" : "3",
-            \ "PointerAlignment" : "Right",
-            \ "SpaceAfterCStyleCast" : "true",
-            \ "SpaceBeforeParens" : "Never",
-            \ "BreakBeforeBraces" : "Allman" }
+"Automatically close nerdtree on quit
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
