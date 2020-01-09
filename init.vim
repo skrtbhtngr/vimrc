@@ -55,6 +55,8 @@ set incsearch               "Start searching as soon as a character is entered, 
 
 set autoread                "Re-read the file if changed from another program
 
+set updatetime=100          "Rate at which swap file is updated
+
 set noerrorbells            "Supress annoying noise
 set novisualbell
 

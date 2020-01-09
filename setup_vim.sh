@@ -12,8 +12,8 @@ git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 echo -e "\nInstalling vim-airline-themes...\n"
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 
-echo -e "\nInstalling auto-pairs...\n"
-git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
+#echo -e "\nInstalling auto-pairs...\n"
+#git clone https://github.com/jiangmiao/auto-pairs ~/.vim/bundle/auto-pairs
 
 echo -e "\nInstalling Tagbar...\n"
 git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
@@ -23,5 +23,8 @@ git clone https://github.com/kana/vim-operator-user.git ~/.vim/bundle/vim-operat
 
 echo -e "\nInstalling vim-clang-format...\n"
 git clone https://github.com/rhysd/vim-clang-format.git ~/.vim/bundle/vim-clang-format
+
+echo -e "\nInstalling vim-gitgutter...\n"
+git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 
 echo -e "\nDone!"
