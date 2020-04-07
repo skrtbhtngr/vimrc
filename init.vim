@@ -82,6 +82,8 @@ augroup persist_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
+let g:AutoPairs = {'(':')', '[':']', '{':'}', '```':'```', '"""':'"""', "'''":"'''"}
+
 "Enable nerdtree
 "autocmd vimenter * NERDTree | wincmd w
 
