@@ -26,7 +26,7 @@ Install `git`, `curl` and `ctags` if not already installed!
 Then run:
 
 ```
-git clone https://github.com/skrtbhtngr/vimrc.git ~/.dotfiles
+git clone https://github.com/skrtbhtngr/dotfiles.git ~/.dotfiles
 chmod +x ~/.dotfiles/setup_vim.sh
 chmod +x ~/.dotfiles/setup_nvim.sh
 ~/.dotfiles/setup_vim.sh
