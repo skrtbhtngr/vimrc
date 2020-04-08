@@ -37,7 +37,7 @@ I have also included some comments which may help you in removing any option(s) 
 
 If you wish to learn more about [n]vim options, refer: [Vim documentation: options](http://vimdoc.sourceforge.net/htmldoc/options.html), [Nvim documentation: options](https://neovim.io/doc/user/options.html)
 
-*NOTE:* vim-gitgutter may cause a slowdown of your vim session if your currently inside a git repo.
+*NOTE:* vim-gitgutter may cause a slowdown of your vim session if you are currently inside a git repo.
 
 *NOTE:* Highlighting the cursor line may cause color issues as I have set the colors according to those of my iTerm profile (not vim).
 
