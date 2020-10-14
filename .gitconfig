@@ -1,0 +1,41 @@
+[sendemail]
+    smtpserver = smtp.gmail.com
+    smtpserverport = 587
+    smtpuser = skrtbhtngr@gmail.com
+#    from = "Sukrit Bhatnagar <skrtbhtngr@gmail.com>"
+#    envelopesender = skrtbhtngr@gmail.com
+    smtpencryption = tls
+    chainreplyto = false
+    suppresscc = self
+
+[user]
+    email = skrtbhtngr@gmail.com
+    name = Sukrit Bhatnagar
+
+[color]
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+
+[diff]
+    renames = true
+    tool = vimdiff
+    algorithm = patience
+
+[credential]
+    helper = store
+
+[format]
+    coverletter = auto
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
