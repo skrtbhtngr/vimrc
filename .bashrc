@@ -23,6 +23,7 @@ alias ....='cd ..; cd ..; cd ..'
 alias la='ls -al'
 
 alias python='python3'
+alias tmux='tmux -2'
 
 shopt -s histappend
 HISTCONTROL=ignoreboth
