@@ -1,3 +1,5 @@
+PS1='${debian_chroot:+($debian_chroot)}\[\033[1;38;5;197m\]\u \[\033[38;5;83m\]\w\[\033[38;5;39m\] \$\[\033[0m\] '
+
 export CLICOLOR=1    
 export EDITOR=nvim
 
@@ -33,3 +35,8 @@ HISTSIZE=100000
 HISTTIMEFORMAT="%d/%m/%y %T $ "
 
 PROMPT_COMMAND='history -a; history -n'
+
+alias ll='exa -aBl --group-directories-first -F'
+export EXA_COLORS="uw=38;5;148:gw=38;5;148:tw=38;5;148:da=38;5;45"
+
+alias diff='sdiff -s'

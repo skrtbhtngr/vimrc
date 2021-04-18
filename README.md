@@ -1,6 +1,6 @@
-# [n]vim configuration!
+# dotfiles
 
-This is a basic vim/neovim configuration having some frequently needed options set and nice plugins enabled. I update it as and when I find something new and useful. It currently uses the following:
+This repo contains a bunch of config files that help set up a familiar environment for applications such as [n]vim, bash, git, etc.
 
 Vim:
 * [vim-pathogen](https://github.com/tpope/vim-pathogen)
@@ -18,20 +18,24 @@ NeoVim:
 * [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * [mkdx](https://github.com/SidOfc/mkdx)
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+* [cscope.vim](https://github.com/vim-scripts/cscope.vim)
+* [nerdtree](https://github.com/preservim/nerdtree)
 
-To use this configuration:
+To use the configs:
 
-Install `git`, `curl` and `ctags` if not already installed!
+Install `vim`/`nvim`, `git`, `curl`, `ctags`, `cscope` and `htop` if not already installed!
 
-Then run:
+Quick setup:
 
 ```
 git clone https://github.com/skrtbhtngr/dotfiles.git ~/.dotfiles
-chmod +x ~/.dotfiles/setup_vim.sh
 chmod +x ~/.dotfiles/setup_nvim.sh
-~/.dotfiles/setup_vim.sh
 ~/.dotfiles/setup_nvim.sh
+chmod +x ~/.dotfiles/setup_others.sh
+~/.dotfiles/setup_others.sh
 ```
+
+For [n]vim:
 
 I have also included some comments which may help you in removing any option(s) you do not require.
 

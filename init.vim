@@ -88,7 +88,80 @@ let g:AutoPairs = {'(':')', '[':']', '{':'}', '```':'```', '"""':'"""', "'''":"'
 "autocmd vimenter * NERDTree | wincmd w
 
 "Set nerdtree window size
-"let g:NERDTreeWinSize = 20
+let g:NERDTreeWinSize = 15
 
 "Automatically close nerdtree on quit
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+nnoremap <C-e> :NERDTreeToggle<CR>
+"nnoremap <C-f> :NERDTreeFind<CR>
+
+if has("cscope")
+        " Look for a 'cscope.out' file starting from the current directory,
+        " going up to the root directory.
+        let s:dirs = split(getcwd(), "/")
+        while s:dirs != []
+                let s:path = "/" . join(s:dirs, "/")
+                if (filereadable(s:path . "/cscope.out"))
+                        execute "cs add " . s:path . "/cscope.out " . s:path . " -v"
+                        break
+                endif
+                let s:dirs = s:dirs[:-2]
+        endwhile
+
+        set csto=0	" Use cscope first, then ctags
+        set cst		" Only search cscope
+        set csverb	" Make cs verbose
+
+        " s: Find this C symbol
+        nmap <C-f>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+        " g: Find this definition
+        nmap <C-g> :cs find g <C-R>=expand("<cword>")<CR><CR>
+        " c: Find functions calling this function
+        nmap <C-c> :cs find c <C-R>=expand("<cword>")<CR><CR>
+        " t: Find this text string
+        nmap <C-f>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+        " e: Find this egrep pattern
+        nmap <C-f>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+        " f: Find this file
+        nmap <C-f>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+        " i: Find files #including this file
+        nmap <C-f>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+        " d: Find functions called by this function
+        nmap <C-f>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+        nmap <C-Space>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-Space>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-Space>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-Space>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-Space>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+        nmap <C-Space>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+        nmap <C-Space>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+        nmap <C-Space>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+
+        " Open a quickfix window for the following queries.
+        set cscopequickfix=s-,c-,d-,i-,t-,e-,g-
+endif
+
+nnoremap <F5> :cprev<CR>
+nnoremap <F6> :cnext<CR>
+"nnoremap <F9> :copen<CR>
+"nnoremap <S-F9> :cprev<CR>
+
+nnoremap <F9> :call QuickfixToggle()<cr>
+
+"https://learnvimscriptthehardway.stevelosh.com/chapters/38.html
+let g:quickfix_is_open = 0
+
+function! QuickfixToggle()
+    if g:quickfix_is_open
+        cclose
+        let g:quickfix_is_open = 0
+        execute g:quickfix_return_to_window . "wincmd w"
+    else
+        let g:quickfix_return_to_window = winnr()
+        copen
+        let g:quickfix_is_open = 1
+    endif
+endfunction
